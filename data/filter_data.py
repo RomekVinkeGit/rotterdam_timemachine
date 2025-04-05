@@ -1,7 +1,7 @@
-"""Script to filter and extract Rotterdam Gazette articles from a newspaper dataset.
+"""Script to filter and extract Rotterdam Newspaper articles from a newspaper dataset.
 
 This module processes a directory of newspaper articles and extracts only those
-from the Rotterdam Gazette. It reads an index file to identify Rotterdam Gazette
+from Rotterdam. It reads an index file to identify Rotterdam
 editions, then copies the corresponding article text files to an output directory.
 
 The script expects a specific directory structure:
@@ -36,13 +36,13 @@ INDEX_FILE = os.path.join(ROOT_DIR, "DIR")
 OUTPUT_DIR = "DIR"
 
 def identify_rotterdam_editions(index_file: str) -> Set[str]:
-    """Identifies all editions of the Rotterdam Gazette from the index file.
+    """Identifies all editions of Rotterdam newspapers from the index file.
     
     Args:
         index_file: Path to the index file containing newspaper metadata.
         
     Returns:
-        A set of identifiers for Rotterdam Gazette editions.
+        A set of identifiers for Rotterdam editions.
         
     Raises:
         FileNotFoundError: If the index file doesn't exist.
@@ -68,18 +68,18 @@ def identify_rotterdam_editions(index_file: str) -> Set[str]:
         logger.error(f"Error reading index file: {e}")
         raise ValueError(f"Malformed index file: {e}")
     
-    logger.info(f"Found {len(rotterdam_ids)} editions of the Rotterdam Gazette.")
+    logger.info(f"Found {len(rotterdam_ids)} editions of the Rotterdam newspapers.")
     if rotterdam_ids:
         logger.debug(f"Sample IDs: {list(rotterdam_ids)[:10]}")
     
     return rotterdam_ids
 
 def copy_rotterdam_articles(root_dir: str, rotterdam_ids: Set[str], output_dir: str) -> int:
-    """Copies Rotterdam Gazette article files to the output directory.
+    """Copies Rotterdam newspaper article files to the output directory.
     
     Args:
         root_dir: Root directory containing the newspaper articles.
-        rotterdam_ids: Set of Rotterdam Gazette edition identifiers.
+        rotterdam_ids: Set of Rotterdam edition identifiers.
         output_dir: Directory where filtered articles will be saved.
         
     Returns:
@@ -139,12 +139,12 @@ def main():
     """Main function to run the filtering process.
     
     This function orchestrates the entire process:
-    1. Identifies Rotterdam Gazette editions from the index file
+    1. Identifies Rotterdam newspaper editions from the index file
     2. Copies the corresponding article files to the output directory
     3. Reports the results
     """
     try:
-        # Identify Rotterdam Gazette editions
+        # Identify Rotterdam newspaper editions
         rotterdam_ids = identify_rotterdam_editions(INDEX_FILE)
         
         # Copy the articles
