@@ -1,0 +1,9 @@
+Write a modern Streamlit app for a historical project called Rotterdam Time Machine. The app should have a clean and attractive UI 
+using custom CSS, allow users to choose a date, retrieve a historical newspaper article from a database, and display a Dutch translation 
+and historical context using AI services (OpenAI & Wikipedia). Use session state to preserve values between interactions. 
+Use modular design and docstrings.
+
+Follow best practices for modularity, readability, and efficiency. Use .env for managing API keys.
+
+Keep the code as simple as possible"
+

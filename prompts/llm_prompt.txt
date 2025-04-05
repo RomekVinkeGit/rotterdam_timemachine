@@ -1,0 +1,24 @@
+Write a Python class for interactions with OpenAI's chat completion API, specifically for translation and summarization tasks.
+
+The module should:
+
+Start with a docstring:
+
+Import necessary types from typing and openai
+
+Import OpenAI credentials and model settings from a local .env module: OPENAI_API_KEY, OPENAI_MODEL, OPENAI_TEMPERATURE
+
+The OpenAIService class should:Initialize an OpenAI client using the API key, Store model and set a low temperature
+
+Define a method that calls the OpenAI Chat API with a system and user message, and returns the response content
+
+Then implement two methods: translate_to_modern_dutch that translates historical Dutch or French to modern Dutch
+Constructs a system prompt depending on the language and formatting options, Calls _create_chat_completion and returns the result
+
+summarize_article: Summarizes historical newspaper text into max_sentences or fewer
+
+Follow best practices for modularity, readability, and efficiency. Use .env for managing API keys.
+
+Keep the code as simple as possible"
+
+

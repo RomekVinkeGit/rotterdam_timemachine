@@ -1,0 +1,22 @@
+Write a Python module that defines a WikipediaService for retrieving historical context using LangChain and Wikipedia.
+
+Start with the module docstring
+
+Load a Dutch-language Wikipedia wrapper (lang="nl", top_k_results=3)
+
+Load a ChatOpenAI model (gpt-4o-mini) using OPENAI_API_KEY from environment
+
+Define a summary_prompt to summarize a text in 2–3 modern Dutch sentences for 18th-century historical context
+
+Define a keyword_prompt to extract 3–5 relevant Dutch-language historical entities (figures, events, places, organizations, etc.) 
+
+Implement two methods:
+
+extract_keywords: Uses the keyword chain to identify key historical terms in the text, returns a list of up to 5 cleaned strings
+
+get_historical_context: For the top 3 keywords, gets Dutch Wikipedia articles using the wrapper
+Runs each result through the summary chain, Returns a list of (keyword, summary) tuples
+
+Follow best practices for modularity, readability, and efficiency. Use .env for managing API keys.
+
+Keep the code as simple as possible"

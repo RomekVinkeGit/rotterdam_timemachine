@@ -1,0 +1,30 @@
+I want to build a full-stack Python project using AI tools. Here's the project idea:
+
+I have about 2500 Dutch and French newspaper articles from the 18th century in XML format. I want to build:
+1. An SQLite database with a single table:
+   - ID: unique identifier for each article
+   - Date: date of publication (extracted from the first 8 characters of the article title, in yyyymmdd format)
+   - Newspaper: name of the newspaper
+   - Language: the language of the newspaper
+   - Content: the full text of the article
+
+2. A Streamlit app that does the following:
+   - Shows a randomly selected article published on this day/month in history
+     - If no match, select the article closest in date
+     - If multiple, pick one at random
+   - Translates the article from old Dutch or French into modern Dutch using OpenAI’s GPT-4o-mini API, and with low temperature setting
+   - Summarizes the article with low temperature setting
+   - Extracts keywords from the summary using GPT-4o-mini API and fetches historical context using Langchain Wikipedia integrator
+
+I want you to tell me **what prompts** I should give you in order to write the full project. The prompts should help me generate:
+- XML parsing logic
+- SQLite database creation and insertion code
+- SQLite database population
+- Article retrieval by date (closest if exact doesn't exist)
+- API calls to OpenAI for translation, keyword generation and summarization
+- Wikipedia context fetching
+- A Streamlit frontend with appropriate UI components
+
+Also suggest any good file structure and best practices for organizing this project as a portfolio piece.
+
+Please return a list of prompts I can use to build this system step-by-step using an AI coding tool like you.

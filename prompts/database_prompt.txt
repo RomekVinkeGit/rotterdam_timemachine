@@ -1,0 +1,34 @@
+Write a Python module for database operations
+This module should:
+
+Use sqlite3 to interact with a SQLite database.
+
+Use a Database class to encapsulate all logic.
+
+Include a top-level docstring
+
+Provide methods for initialization, connection management, inserting articles, and retrieving articles by various date filters.
+
+Implement the following functionality in the Database class:
+
+insert_article: inserts a NewsArticle into the DB and returns its ID
+
+get_articles_by_date: retrieves articles for a given date
+
+get_articles_by_day_month: retrieves articles from any year with the same day and month
+
+get_closest_article: retrieves the single article closest to the given date, using JULIANDAY()
+
+get_closest_day_month_article: retrieves the article with the closest day-of-year match, using modulo 365 logic
+
+The database schema should include:
+
+id (INTEGER PRIMARY KEY AUTOINCREMENT)
+
+publication_date (DATE, NOT NULL)
+
+newspaper, content, original_language (all TEXT, NOT NULL)
+
+Follow best practices for modularity, readability, and efficiency. Use .env for managing API keys.
+
+Keep the code as simple as possible"

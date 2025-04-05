@@ -1,0 +1,23 @@
+Write a Python script that populates a database by parsing XML files.
+The script should include:
+
+A module docstring
+
+Imports and required modules from a local package
+
+A function that extracts a date prefix from filenames like "17500604_example.xml" and converts it to a datetime.date object.
+
+A function that returns "Gazette de Rotterdam" if the year is before 1720, "Rotterdamse courant" otherwise.
+
+A that uses simple heuristics to return either "fr" or "nl".
+
+A function Parses the XML using ElementTree Extracts the <title> and first <p> element content Uses the filename 
+to extract the publication date Applies the language and newspaper detection functions Returns a NewsArticle object
+
+A main() function that: Initializes a Database instance Reads all *.xml files from the data/articles/ directory 
+Iterates through each file, parses the article, and inserts it into the database Uses tqdm to display progress and prints 
+the total number of successfully inserted articles
+
+Follow best practices for modularity, readability, and efficiency. Use .env for managing API keys.
+
+Keep the code as simple as possible"

@@ -1,0 +1,11 @@
+Please review and refactor all the code in this repository. Ensure it adheres to best practices for:
+
+Modularity: Break code into reusable, well-scoped modules or functions.
+
+Readability: Improve naming conventions, formatting, and add comments where helpful.
+
+Efficiency: Optimize any redundant or slow logic where possible.
+
+Additionally, make sure all API keys and sensitive configuration values are managed securely using a .env file and loaded using environment variables.
+
+Please provide explanations for any major changes or improvements you make.

@@ -1,0 +1,23 @@
+Write a Python module that defines a data model.
+Include a module-level docstring describing that it contains database model
+
+The class should include:
+
+A class-level docstring explaining that it represents a historical newspaper article, and briefly describes its purpose and structure.
+
+The following attributes with type hints:
+
+id: Optional[int] – the unique identifier for the article
+
+publication_date: date – when the article was published
+
+newspaper: str – the name of the newspaper
+
+content: str – the full text of the article
+
+original_language: str – either 'nl' for Dutch or 'fr' for French
+Also make sure to import dataclass, date, Optional, and add meaningful docstrings to both the module and the class.
+
+Follow best practices for modularity, readability, and efficiency. Use .env for managing API keys.
+
+Keep the code as simple as possible"
